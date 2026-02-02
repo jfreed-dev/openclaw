@@ -37,7 +37,7 @@ describe("sessions_spawn thinking defaults", () => {
   it("applies agents.defaults.subagents.thinking when thinking is omitted", async () => {
     const tool = createSessionsSpawnTool({ agentSessionKey: "agent:test:main" });
     const result = await tool.execute("call-1", { task: "hello" });
-    expect(result).toMatchObject({ status: "accepted" });
+    expect(result.details).toMatchObject({ status: "accepted" });
 
     const { callGateway } = await import("../gateway/call.js");
     const calls = (callGateway as unknown as ReturnType<typeof vi.fn>).mock.calls;
@@ -52,7 +52,7 @@ describe("sessions_spawn thinking defaults", () => {
   it("prefers explicit sessions_spawn.thinking over config default", async () => {
     const tool = createSessionsSpawnTool({ agentSessionKey: "agent:test:main" });
     const result = await tool.execute("call-2", { task: "hello", thinking: "low" });
-    expect(result).toMatchObject({ status: "accepted" });
+    expect(result.details).toMatchObject({ status: "accepted" });
 
     const { callGateway } = await import("../gateway/call.js");
     const calls = (callGateway as unknown as ReturnType<typeof vi.fn>).mock.calls;
