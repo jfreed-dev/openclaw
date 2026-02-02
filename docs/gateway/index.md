@@ -238,11 +238,11 @@ Notes:
 Bundled mac app:
 
 - OpenClaw.app can bundle a Node-based gateway relay and install a per-user LaunchAgent labeled
-  `bot.molt.gateway` (or `bot.molt.<profile>`; legacy `com.openclaw.*` labels still unload cleanly).
-- To stop it cleanly, use `openclaw gateway stop` (or `launchctl bootout gui/$UID/bot.molt.gateway`).
-- To restart, use `openclaw gateway restart` (or `launchctl kickstart -k gui/$UID/bot.molt.gateway`).
+  `ai.openclaw.gateway` (or `ai.openclaw.<profile>`).
+- To stop it cleanly, use `openclaw gateway stop` (or `launchctl bootout gui/$UID/ai.openclaw.gateway`).
+- To restart, use `openclaw gateway restart` (or `launchctl kickstart -k gui/$UID/ai.openclaw.gateway`).
   - `launchctl` only works if the LaunchAgent is installed; otherwise use `openclaw gateway install` first.
-  - Replace the label with `bot.molt.<profile>` when running a named profile.
+  - Replace the label with `ai.openclaw.<profile>` when running a named profile.
 
 ## Supervision (systemd user unit)
 

@@ -188,6 +188,10 @@
   - changed-files:
       - any-glob-to-any-file:
           - "extensions/diagnostics-otel/**"
+"extensions: dgx-spark":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "extensions/dgx-spark/**"
 "extensions: google-antigravity-auth":
   - changed-files:
       - any-glob-to-any-file:

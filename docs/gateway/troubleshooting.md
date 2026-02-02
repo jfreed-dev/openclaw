@@ -639,7 +639,7 @@ If the gateway is supervised by launchd, killing the PID will just respawn it. S
 ```bash
 openclaw gateway status
 openclaw gateway stop
-# Or: launchctl bootout gui/$UID/bot.molt.gateway (replace with bot.molt.<profile>; legacy com.openclaw.* still works)
+# Or: launchctl bootout gui/$UID/ai.openclaw.gateway (replace with ai.openclaw.<profile>)
 ```
 
 **Fix 2: Port is busy (find the listener)**
