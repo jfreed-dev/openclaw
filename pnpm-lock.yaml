@@ -251,6 +251,12 @@ importers:
         specifier: workspace:*
         version: link:../..
 
+  extensions/dgx-spark:
+    devDependencies:
+      openclaw:
+        specifier: workspace:*
+        version: link:../..
+
   extensions/diagnostics-otel:
     dependencies:
       '@opentelemetry/api':

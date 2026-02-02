@@ -1,0 +1,15 @@
+{
+  "id": "dgx-spark",
+  "name": "DGX Spark",
+  "description": "Tool plugin wrapping the DGX Spark Platform Controller (MPC) service.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "baseUrl": {
+        "type": "string",
+        "description": "Base URL for the MPC service (default: http://127.0.0.1:5001)"
+      }
+    }
+  }
+}
